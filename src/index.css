@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-doc-sans: "Carlito", "Calibri", "Liberation Sans", Arial, sans-serif;
+  --font-doc-serif: "Source Serif 4", "Times New Roman", Georgia, serif;
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: #f4f5f7;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbars for split workspace */
+.workspace-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.workspace-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.workspace-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.25);
+  border-radius: 3px;
+}
+
+.workspace-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.45);
+}
+
+/* Official A4 Print Stylesheet */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only-container {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    overflow: visible !important;
+  }
+
+  #sanction-print-sheet {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    border: none !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "SanctionDesk — Government Sanction Order Studio",
+  "description": "Create, preview, print, and export official government sanction orders with automatic GST/IT TDS calculations, Indian Rupee amount-in-words, and reusable departmental templates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
